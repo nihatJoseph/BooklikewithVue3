@@ -13,21 +13,28 @@
 </template>
 
 <script>
-import cryptoJs from "crypto-js";
+import CryptoJs from "crypto-js";
 export default {
   data() {
     return {
       userData: {
         fullname: null,
         username: null,
-
         password: null,
       },
     };
   },
   methods: {
     onSave() {
-      console.log(this.userData);
+      const password = CryptoJs.HmacSHA1(this.userData.password, this.$store.getters._saltKey).toString();
+      this.$appAxios.post("/users", { ...this.userData, password }).then((registered_user_response) => {
+        console.log("registered_user_response :>> ", registered_user_response);
+        this.$router.push({ name: "HomePage" });
+      });
+
+      // const decryptedPassword = cryptoJs.AES.decrypt(cryptedPassword, key).toString(cryptoJs.enc.Utf8);
+      // console.log("decryptedPassword :>> ", decryptedPassword);
+      // console.log(this.userData);
     },
   },
 };

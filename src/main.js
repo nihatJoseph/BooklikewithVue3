@@ -3,6 +3,7 @@ import App from './App.vue'
 
 import "@/assets/style.css";
 
+import store from "./store";
 import router from "./router";
 import appAxios from "@/utils/appAxios";
 
@@ -15,6 +16,7 @@ app.component("AppHeader", appHeader);
 app.component("BookmarkList", BookmarkList);
 
 app.use(router);
+app.use(store);
 
 app.config.globalProperties.$appAxios = appAxios;
 

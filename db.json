@@ -1,5 +1,12 @@
 {
-  "users": [],
+  "users": [
+    {
+      "fullname": "nihat",
+      "username": "ggjaj",
+      "password": "682d0c21835b9cb5cbdbb71076c7846dccd42b44",
+      "id": 3
+    }
+  ],
   "bookmarks": [],
   "categories": []
 }

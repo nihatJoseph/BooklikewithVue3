@@ -8,10 +8,10 @@
             d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-3 2v5l-1-.75L15 9V4h2zm3 12H8V4h5v9l3-2.25L19 13V4h1v12z"
           />
         </svg>
-        SocialMark
+        BookLike
       </div>
 
-      <div class="ml-auto flex items-center">
+      <div v-if="_isAuthenticated" class="ml-auto flex items-center">
         <router-link
           :to="{ name: 'NewBookmarkPage' }"
           class="flex bg-gray-700 hover:bg-black text-white px-3 py-1 rounded-sm text-sm items-center mr-2"
@@ -53,7 +53,7 @@
               </svg>
               Favorites</a
             >
-            <a href="#" class="menu-item">
+            <a @click="onLogout" href="#" class="menu-item">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 enable-background="new 0 0 24 24"
@@ -75,3 +75,19 @@
     </nav>
   </div>
 </template>
+
+<script>
+import { mapGetters } from "vuex";
+
+export default {
+  computed: {
+    ...mapGetters(["_isAuthenticated"]),
+  },
+  methods: {
+    onLogout() {
+      this.$store.commit("logoutUser");
+      this.$router.push({ name: "LoginPage" });
+    },
+  },
+};
+</script>
