@@ -4,9 +4,79 @@
       "fullname": "nihat",
       "username": "ggjaj",
       "password": "682d0c21835b9cb5cbdbb71076c7846dccd42b44",
-      "id": 3
+      "id": 3,
+      "likes": [
+        8,
+        9,
+        7
+      ],
+      "bookmarks": []
     }
   ],
-  "bookmarks": [],
-  "categories": []
+  "bookmarks": [
+    {
+      "title": "Frontend gibisi yok",
+      "url": "https://...",
+      "categoryId": 3,
+      "description": "Baba Meraba",
+      "userId": 3,
+      "created_at": "2022-09-25T20:16:48.731Z",
+      "id": 6
+    },
+    {
+      "title": "baba2",
+      "url": "https://www.google.com",
+      "categoryId": 1,
+      "description": "Vuecü",
+      "userId": 3,
+      "created_at": "2022-09-27T18:28:25.704Z",
+      "id": 7
+    },
+    {
+      "title": "wm",
+      "url": "wmnet.net",
+      "categoryId": 1,
+      "description": "baba meraba\n",
+      "userId": 3,
+      "created_at": "2022-09-28T15:19:23.813Z",
+      "id": 8
+    },
+    {
+      "title": "reactcı",
+      "url": "https://reactcı.com",
+      "categoryId": 2,
+      "description": "baba reactcı\n",
+      "userId": 3,
+      "created_at": "2022-09-28T17:56:18.104Z",
+      "id": 9
+    }
+  ],
+  "categories": [
+    {
+      "name": "Vue.js",
+      "id": 1
+    },
+    {
+      "name": "React.js",
+      "id": 2
+    },
+    {
+      "name": "Frontend",
+      "id": 3
+    },
+    {
+      "name": "Backend",
+      "id": 4
+    },
+    {
+      "name": "Cloud",
+      "id": 5
+    },
+    {
+      "name": "Sosyal Yaşam",
+      "id": 6
+    }
+  ],
+  "likes": [],
+  "bookmark": []
 }

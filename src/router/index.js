@@ -22,6 +22,30 @@ const routes = [
     path: "/newbookmarkpage",
     component: () => import("@/views/NewBookmarkPage.vue"),
   },
+  {
+    name: "Favorites",
+    path: "/favorites",
+    meta: {
+      componentName: "BookmarkList",
+    },
+    component: () => import("@/views/AccountPage.vue"),
+  },
+  {
+    name: "Likes",
+    path: "/likes",
+    meta: {
+      componentName: "BookmarkList",
+    },
+    component: () => import("@/views/AccountPage.vue"),
+  },
+  {
+    name: "Settings",
+    path: "/settings",
+    meta: {
+      componentName: "UserSettings",
+    },
+    component: () => import("@/views/AccountPage.vue"),
+  },
 ];
 
 const router = createRouter({
@@ -42,9 +66,6 @@ router.beforeEach((to, from, next) => {
   } else {
     next();
   }
-
-  console.log("to:", to);
-  console.log("from:", from);
 });
 
 export default router;
