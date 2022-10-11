@@ -1,3 +1,5 @@
+Projeye yeni commit ile birlikte socket.io eklendi.
+
 # booklike
 
 ## Project setup
