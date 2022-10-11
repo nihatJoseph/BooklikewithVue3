@@ -12,6 +12,9 @@ import BookmarkList from "@/components/Shared/appBookmarkList/BookmarkList";
 
 const app = createApp(App);
 
+import io from "socket.io-client";
+const socket = io("http://localhost:2018");
+
 app.component("AppHeader", appHeader);
 app.component("BookmarkList", BookmarkList);
 
@@ -20,5 +23,6 @@ app.use(store);
 
 app.config.globalProperties.$appAxios = appAxios;
 app.config.globalProperties.$log = console.log;
+app.config.globalProperties.$socket = socket;
 
 app.mount("#app");

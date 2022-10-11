@@ -2,11 +2,11 @@
     <AppHeader></AppHeader>
     <div class="flex flex-row">,
 
-        {{$log($route)}}
+        <!-- {{$log($route)}} -->
         <AccountSidebar></AccountSidebar>
         <component :is="$route.meta.componentName" :items="bookmarkList"></component>
-        <BookmarkList v-if="bookmarkList.length >0" :items="bookmarkList"/>
-        <div v-else>Bookmark bulunmamaktadır.</div>
+        <!-- <BookmarkList v-if="bookmarkList.length >0" :items="bookmarkList"/>
+        <div v-else>Bookmark bulunmamaktadır.</div> -->
     </div>
 
 </template>
@@ -21,7 +21,7 @@ export default {
     },
     data() {
         return {
-            bookmarkList: []
+            bookmarkList: [],
         }
     },
     created() {
@@ -29,6 +29,6 @@ export default {
             this.bookmarkList = bookmark_list_response?.data || []
 
         })
-    }
+    },
 }
 </script>
